@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash & Shweta — Wedding Celebrations | Chokhi Dhani, Jaipur</title>
+  <meta name="description" content="Relive the magical wedding celebrations of Yash & Shweta at the royal Chokhi Dhani, Jaipur. Browse through thousands of photos from every ceremony.">
+  <meta property="og:title" content="Yash & Shweta — Wedding Celebrations">
+  <meta property="og:description" content="A royal Rajasthani wedding at Chokhi Dhani, Jaipur. February 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/thumbs/wedding/DSC09136.jpg">
+  <meta name="theme-color" content="#8B1A1A">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Page Load Overlay -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-ornament"></div>
+      <p class="loader-text">Y &amp; S</p>
+      <div class="loader-ornament"></div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-mandala"></div>
+    <div class="hero-content">
+      <div class="hero-ornament-top"></div>
+      <p class="hero-prelude">The Wedding Celebrations of</p>
+      <h1 class="hero-names">Yash <span class="hero-ampersand">&amp;</span> Shweta</h1>
+      <div class="hero-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+      <p class="hero-date">February 2026</p>
+      <p class="hero-venue">Chokhi Dhani, Jaipur</p>
+      <div class="hero-ornament-bottom"></div>
+      <a href="#events" class="hero-scroll-btn" aria-label="Scroll to events">
+        <span class="scroll-arrow">&#8595;</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Events Navigation -->
+  <section id="events" class="events-section">
+    <div class="section-header">
+      <div class="ornamental-divider">
+        <span class="od-line"></span>
+        <span class="od-motif">✦</span>
+        <span class="od-line"></span>
+      </div>
+      <h2 class="section-title">The Celebrations</h2>
+      <p class="section-subtitle">Three days of joy, love, and timeless memories</p>
+    </div>
+    <div class="events-scroll-container">
+      <div id="events-nav" class="events-nav">
+        <!-- Event cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section" style="display:none;">
+    <div class="gallery-header">
+      <button id="back-to-events" class="back-btn" aria-label="Back to all events">
+        &#8592; All Events
+      </button>
+      <div class="gallery-event-info">
+        <span id="gallery-icon" class="gallery-event-icon"></span>
+        <div>
+          <h2 id="gallery-title" class="gallery-event-title"></h2>
+          <p id="gallery-subtitle" class="gallery-event-subtitle"></p>
+        </div>
+      </div>
+      <p id="gallery-count" class="gallery-photo-count"></p>
+    </div>
+    <div id="gallery-grid" class="masonry-grid">
+      <!-- Photo cards injected by JS -->
+    </div>
+    <div id="gallery-loading" class="gallery-loading" style="display:none;">
+      <div class="loading-spinner"></div>
+      <p>Loading photos...</p>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" style="display:none;">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous photo">&#10094;</button>
+    <button class="lightbox-next" aria-label="Next photo">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Wedding photo">
+      <div class="lightbox-loading">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    <div class="lightbox-footer">
+      <span id="lightbox-counter" class="lightbox-counter"></span>
+      <a id="lightbox-drive-link" class="lightbox-drive-btn" href="#" target="_blank" rel="noopener noreferrer" download>
+        &#8681; Download
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-ornament">
+      <span class="od-line"></span>
+      <span class="od-motif">◆</span>
+      <span class="od-line"></span>
+    </div>
+    <p class="footer-names">Yash &amp; Shweta</p>
+    <p class="footer-venue">Chokhi Dhani, Jaipur &middot; February 2026</p>
+    <a href="https://drive.google.com/drive/u/0/folders/14LOV0zsLmYr8rPiG0ejq_0-RF6wycTV3" class="footer-drive-link" target="_blank" rel="noopener noreferrer">
+      &#128229; View Full Album on Google Drive
+    </a>
+    <p class="footer-note">Made with love</p>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>

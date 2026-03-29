@@ -1,0 +1,8 @@
+.DS_Store
+token.json
+credentials.json
+generate_thumbnails.py
+export_drive_ids.py
+*.pyc
+__pycache__/
+.claude/
