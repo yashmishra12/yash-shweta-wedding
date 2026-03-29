@@ -215,7 +215,11 @@
     $$('.event-card').forEach(c => c.classList.toggle('active', c.dataset.slug === slug));
 
     // Update gallery header
-    dom.galleryIcon.textContent = evt.icon;
+    if (evt.icon.includes('/')) {
+      dom.galleryIcon.innerHTML = `<img src="${evt.icon}" alt="${evt.title}" style="width:40px;height:40px;object-fit:contain;">`;
+    } else {
+      dom.galleryIcon.textContent = evt.icon;
+    }
     dom.galleryTitle.textContent = evt.title;
     dom.gallerySubtitle.textContent = evt.subtitle;
     dom.galleryCount.textContent = `${evt.photo_count} photos`;
