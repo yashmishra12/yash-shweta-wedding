@@ -149,12 +149,12 @@
   // Fallback event data if events.json is not yet generated
   function showFallbackEvents() {
     eventsData = [
-      { slug: 'pre-wedding', title: 'Pre-Wedding Photoshoot', subtitle: 'Where Our Story Began', icon: '\u{1F491}', color: '#C4926E', photo_count: 157, photos: [] },
-      { slug: 'welcome', title: 'Welcome Ceremony', subtitle: 'Atithi Devo Bhava', icon: '\u{1FA94}', color: '#8B1A1A', photo_count: 111, photos: [] },
-      { slug: 'engagement-sangeet', title: 'Engagement & Sangeet', subtitle: 'Rings, Rhythms & Revelry', icon: '\u{1F48D}', color: '#6B3FA0', photo_count: 960, photos: [] },
-      { slug: 'haldi', title: 'Haldi Ceremony', subtitle: 'The Golden Blessing', icon: '\u{1F33C}', color: '#D4A017', photo_count: 993, photos: [] },
-      { slug: 'myra-mehendi', title: 'Myra & Mehendi', subtitle: 'Patterns of Love', icon: '\u{1F33F}', color: '#2E7D32', photo_count: 786, photos: [] },
-      { slug: 'wedding', title: 'The Wedding', subtitle: 'Two Souls, One Journey', icon: '\u{1F549}\uFE0F', color: '#B8860B', photo_count: 1342, photos: [] },
+      { slug: 'pre-wedding', title: 'Pre-Wedding Photoshoot', subtitle: 'Where Our Story Began', icon: 'images/icons/pre-wedding.png', color: '#C4926E', photo_count: 157, photos: [] },
+      { slug: 'welcome', title: 'Welcome Ceremony', subtitle: 'Atithi Devo Bhava', icon: 'images/icons/welcome.png', color: '#8B1A1A', photo_count: 111, photos: [] },
+      { slug: 'engagement-sangeet', title: 'Engagement & Sangeet', subtitle: 'Rings, Rhythms & Revelry', icon: 'images/icons/sangeet.png', color: '#6B3FA0', photo_count: 960, photos: [] },
+      { slug: 'haldi', title: 'Haldi Ceremony', subtitle: 'The Golden Blessing', icon: 'images/icons/haldi.png', color: '#D4A017', photo_count: 993, photos: [] },
+      { slug: 'myra-mehendi', title: 'Myra & Mehendi', subtitle: 'Patterns of Love', icon: 'images/icons/mehandi.png', color: '#2E7D32', photo_count: 786, photos: [] },
+      { slug: 'wedding', title: 'The Wedding', subtitle: 'Two Souls, One Journey', icon: 'images/icons/wedding.png', color: '#B8860B', photo_count: 1342, photos: [] },
     ];
     renderEventCards();
     bindEvents();
@@ -177,8 +177,13 @@
       card.setAttribute('tabindex', '0');
       card.style.transitionDelay = `${i * 0.08}s`;
 
+      // Use <img> if icon is a path, otherwise emoji text
+      const iconHtml = evt.icon.includes('/')
+        ? `<img class="event-card-icon-img" src="${evt.icon}" alt="${evt.title}" loading="lazy">`
+        : `<span class="event-card-icon">${evt.icon}</span>`;
+
       card.innerHTML = `
-        <span class="event-card-icon">${evt.icon}</span>
+        ${iconHtml}
         <h3 class="event-card-title">${evt.title}</h3>
         <p class="event-card-subtitle">${evt.subtitle}</p>
         <p class="event-card-count">${evt.photo_count} photos</p>

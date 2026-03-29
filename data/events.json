@@ -4,7 +4,7 @@
     "title": "Pre-Wedding Photoshoot",
     "subtitle": "Where Our Story Began",
     "description": "A magical pre-wedding shoot capturing the love and excitement before the big celebrations.",
-    "icon": "\ud83d\udc91",
+    "icon": "images/icons/pre-wedding.png",
     "color": "#C4926E",
     "photo_count": 157,
     "photos": [
@@ -800,7 +800,7 @@
     "title": "Welcome Ceremony",
     "subtitle": "Atithi Devo Bhava",
     "description": "The warm welcome of guests at the magnificent Chokhi Dhani, Jaipur \u2014 where every guest is family.",
-    "icon": "\ud83e\ude94",
+    "icon": "images/icons/welcome.png",
     "color": "#8B1A1A",
     "photo_count": 111,
     "photos": [
@@ -1366,7 +1366,7 @@
     "title": "Engagement & Sangeet",
     "subtitle": "Rings, Rhythms & Revelry",
     "description": "An evening of promises sealed with rings, followed by a night of dance, music, and pure celebration.",
-    "icon": "\ud83d\udc8d",
+    "icon": "images/icons/sangeet.png",
     "color": "#6B3FA0",
     "photo_count": 959,
     "photos": [
@@ -6172,7 +6172,7 @@
     "title": "Haldi Ceremony",
     "subtitle": "The Golden Blessing",
     "description": "Bathed in turmeric and love \u2014 the auspicious Haldi ceremony filled with laughter and blessings.",
-    "icon": "\ud83c\udf3c",
+    "icon": "images/icons/haldi.png",
     "color": "#D4A017",
     "photo_count": 992,
     "photos": [
@@ -11143,7 +11143,7 @@
     "title": "Myra & Mehendi",
     "subtitle": "Patterns of Love",
     "description": "Intricate mehendi designs and the joyful Myra ceremony \u2014 tradition woven with beauty.",
-    "icon": "\ud83c\udf3f",
+    "icon": "images/icons/mehandi.png",
     "color": "#2E7D32",
     "photo_count": 785,
     "photos": [
@@ -15079,7 +15079,7 @@
     "title": "The Wedding",
     "subtitle": "Two Souls, One Journey",
     "description": "The grand wedding ceremony at Chokhi Dhani \u2014 where vows were exchanged under the stars of Jaipur.",
-    "icon": "\ud83d\udd49\ufe0f",
+    "icon": "images/icons/wedding.png",
     "color": "#B8860B",
     "photo_count": 1341,
     "photos": [
