@@ -10,16 +10,15 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/thumbs/wedding/DSC09136.jpg">
   <meta name="theme-color" content="#8B1A1A">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260426p">
 </head>
-<body>
-
-  <!-- Page Load Overlay -->
-  <div id="page-loader" class="page-loader">
+<body class="theme-dark">
+  <div id="page-loader" class="page-loader" aria-hidden="true">
     <div class="loader-content">
       <div class="loader-ornament"></div>
       <p class="loader-text">Y &amp; S</p>
@@ -27,150 +26,177 @@
     </div>
   </div>
 
-  <!-- Hero Section -->
   <header id="hero" class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-mandala"></div>
     <div class="hero-content">
-      <div class="hero-ornament-top"></div>
-      <p class="hero-prelude">The Wedding Celebrations of</p>
-      <h1 class="hero-names">Yash <span class="hero-ampersand">&amp;</span> Shweta</h1>
-      <div class="hero-divider">
-        <span class="divider-line"></span>
-        <span class="divider-diamond">◆</span>
-        <span class="divider-line"></span>
+      <p class="hero-kicker">The Wedding Celebrations of</p>
+      <h1 class="hero-title">Yash <span>&amp;</span> Shweta</h1>
+      <p class="hero-meta">February 2026</p>
+      <p class="hero-location">Chokhi Dhani, Jaipur</p>
+      <div class="hero-actions">
+        <a href="#events" class="hero-primary">Browse the celebrations</a>
+        <a href="#videos" class="hero-secondary">Watch the films</a>
       </div>
-      <p class="hero-date">February 2026</p>
-      <p class="hero-venue">Chokhi Dhani, Jaipur</p>
-      <div class="hero-ornament-bottom"></div>
-      <a href="#events" class="hero-scroll-btn" aria-label="Scroll to events">
-        <span class="scroll-arrow">&#8595;</span>
-      </a>
+      <p class="hero-note">A weekend of music, rituals, and family joy, gathered into one living gallery.</p>
     </div>
   </header>
 
-  <!-- Events Navigation -->
   <section id="events" class="events-section">
-    <div class="section-header">
-      <div class="ornamental-divider">
-        <span class="od-line"></span>
-        <span class="od-motif">✦</span>
-        <span class="od-line"></span>
-      </div>
-      <h2 class="section-title">The Celebrations</h2>
-      <p class="section-subtitle">Joy, love, and timeless memories.</p>
+    <div class="section-intro reveal">
+      <p class="eyebrow">Moments by ceremony</p>
+      <h2 class="section-title">Move through the wedding like an album, not a folder.</h2>
+      <p class="section-copy">Each celebration opens into its own polished viewing mode, with a cover frame, quick switching, and an immersive photo flow.</p>
     </div>
-    <div class="events-scroll-container">
-      <div id="events-nav" class="events-nav">
-        <!-- Event cards injected by JS -->
-      </div>
-    </div>
-  </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery-section" style="display:none;">
-    <div class="gallery-header">
-      <button id="back-to-events" class="back-btn" aria-label="Back to all events">
-        &#8592; All Events
-      </button>
-      <div class="gallery-event-info">
-        <div id="gallery-icon" class="gallery-event-icon"></div>
+    <div class="events-shell reveal">
+      <div class="events-shell-header">
         <div>
-          <h2 id="gallery-title" class="gallery-event-title"></h2>
-          <p id="gallery-subtitle" class="gallery-event-subtitle"></p>
+          <p class="events-shell-label">Ceremonies</p>
+          <p class="events-shell-subtitle">Pick any chapter to open the dedicated gallery view.</p>
         </div>
       </div>
-      <p id="gallery-count" class="gallery-photo-count"></p>
-    </div>
-    <div id="gallery-grid" class="masonry-grid">
-      <!-- Photo cards injected by JS -->
-    </div>
-    <div id="gallery-loading" class="gallery-loading" style="display:none;">
-      <div class="loading-spinner"></div>
-      <p>Loading photos...</p>
+      <div class="events-scroll-container">
+        <div id="events-nav" class="events-nav" aria-label="Wedding events">
+          <!-- Event cards injected by JS -->
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Lightbox -->
+  <section id="gallery" class="gallery-section" style="display:none;">
+    <div class="gallery-shell">
+      <div class="gallery-sticky-wrap">
+        <div class="gallery-topbar">
+          <button id="back-to-events" class="back-btn" aria-label="Back to all events">
+            <span aria-hidden="true">&#8592;</span>
+            <span>All Celebrations</span>
+          </button>
+          <p class="gallery-topbar-note">Editorial gallery view</p>
+        </div>
+
+        <div class="gallery-rail">
+          <div id="gallery-rail" class="gallery-rail-track" aria-label="Gallery event switcher">
+            <!-- Gallery event pills injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-cover reveal">
+        <div id="gallery-cover-image" class="gallery-cover-image"></div>
+        <div class="gallery-cover-overlay"></div>
+        <div class="gallery-cover-content">
+          <p id="gallery-kicker" class="gallery-kicker">Wedding album</p>
+          <div class="gallery-cover-main">
+            <div class="gallery-cover-copy">
+              <h2 id="gallery-title" class="gallery-event-title"></h2>
+              <p id="gallery-subtitle" class="gallery-event-subtitle"></p>
+              <p id="gallery-meta" class="gallery-event-meta"></p>
+            </div>
+            <div class="gallery-cover-stats">
+              <p id="gallery-count" class="gallery-photo-count"></p>
+              <p id="gallery-status" class="gallery-photo-status"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="gallery-grid" class="masonry-grid">
+        <!-- Photo cards injected by JS -->
+      </div>
+
+      <div id="gallery-loading" class="gallery-loading" style="display:none;">
+        <div class="loading-spinner"></div>
+        <p>Loading photos...</p>
+      </div>
+    </div>
+  </section>
+
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" style="display:none;">
     <div class="lightbox-backdrop"></div>
     <button class="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-prev" aria-label="Previous photo">&#10094;</button>
-    <button class="lightbox-next" aria-label="Next photo">&#10095;</button>
-    <div class="lightbox-content">
-      <img id="lightbox-img" class="lightbox-img" src="" alt="Wedding photo">
-      <div class="lightbox-loading">
-        <div class="loading-spinner"></div>
-      </div>
+    <div class="lightbox-zoom-controls" aria-label="Photo zoom controls">
+      <button id="lightbox-zoom-in" class="lightbox-zoom-btn" type="button" aria-label="Zoom in">+</button>
+      <button id="lightbox-zoom-out" class="lightbox-zoom-btn" type="button" aria-label="Zoom out">−</button>
+      <button id="lightbox-zoom-reset" class="lightbox-zoom-btn lightbox-zoom-btn-reset" type="button" aria-label="Reset zoom">100%</button>
     </div>
-    <div class="lightbox-footer">
-      <span id="lightbox-counter" class="lightbox-counter"></span>
-      <a id="lightbox-drive-link" class="lightbox-drive-btn" href="#" target="_blank" rel="noopener noreferrer" download>
-        &#8681; Download
-      </a>
+    <div class="lightbox-content">
+      <div class="lightbox-frame">
+        <div id="lightbox-stage" class="lightbox-stage">
+          <img id="lightbox-img" class="lightbox-img" src="" alt="Wedding photo" draggable="false">
+          <div class="lightbox-loading">
+            <div class="loading-spinner"></div>
+          </div>
+        </div>
+        <div class="lightbox-bottom-bar">
+          <button class="lightbox-prev" aria-label="Previous photo">&#10094;</button>
+          <div class="lightbox-footer">
+            <div class="lightbox-caption">
+              <span id="lightbox-event" class="lightbox-event"></span>
+              <span id="lightbox-counter" class="lightbox-counter"></span>
+            </div>
+          </div>
+          <button class="lightbox-next" aria-label="Next photo">&#10095;</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Videos Section -->
   <section id="videos" class="videos-section">
-    <div class="section-header">
-      <div class="ornamental-divider">
-        <span class="od-line"></span>
-        <span class="od-motif">✦</span>
-        <span class="od-line"></span>
-      </div>
-      <h2 class="section-title">The Films</h2>
-      <p class="section-subtitle">Moments that move.</p>
+    <div class="section-intro reveal">
+      <p class="eyebrow">Wedding films</p>
+      <h2 class="section-title">Motion, music, and everything between the still frames.</h2>
+      <p class="section-copy">A few of the key ceremonies, cut into films that carry the pace and atmosphere of the weekend.</p>
     </div>
-    <div class="videos-grid">
 
+    <div class="videos-grid">
       <div class="video-card reveal">
         <div class="video-label-top">Myra Ceremony</div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/nJ0czojqgB8" title="Myra Ceremony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-        </div>
+        <a class="video-poster" href="https://www.youtube.com/watch?v=nJ0czojqgB8" target="_blank" rel="noopener noreferrer" aria-label="Watch Myra Ceremony on YouTube">
+          <img src="https://i.ytimg.com/vi/nJ0czojqgB8/hqdefault.jpg" alt="Myra Ceremony film poster" loading="lazy">
+          <span class="video-poster-overlay"></span>
+          <span class="video-play-badge">Watch on YouTube</span>
+        </a>
       </div>
 
       <div class="video-card reveal">
         <div class="video-label-top">Engagement &amp; Sangeet</div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/vll1sSf12ZI" title="Engagement and Sangeet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-        </div>
+        <a class="video-poster" href="https://www.youtube.com/watch?v=vll1sSf12ZI" target="_blank" rel="noopener noreferrer" aria-label="Watch Engagement and Sangeet on YouTube">
+          <img src="https://i.ytimg.com/vi/vll1sSf12ZI/hqdefault.jpg" alt="Engagement and Sangeet film poster" loading="lazy">
+          <span class="video-poster-overlay"></span>
+          <span class="video-play-badge">Watch on YouTube</span>
+        </a>
       </div>
 
       <div class="video-card reveal">
         <div class="video-label-top">Haldi Ceremony</div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/l-rvzW59BNk" title="Haldi Ceremony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-        </div>
+        <a class="video-poster" href="https://www.youtube.com/watch?v=l-rvzW59BNk" target="_blank" rel="noopener noreferrer" aria-label="Watch Haldi Ceremony on YouTube">
+          <img src="https://i.ytimg.com/vi/l-rvzW59BNk/hqdefault.jpg" alt="Haldi Ceremony film poster" loading="lazy">
+          <span class="video-poster-overlay"></span>
+          <span class="video-play-badge">Watch on YouTube</span>
+        </a>
       </div>
 
       <div class="video-card video-card--wide reveal">
         <div class="video-label-top">The Wedding — Complete Film</div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/_P76rGr5vjE" title="The Wedding Complete Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-        </div>
+        <a class="video-poster" href="https://www.youtube.com/watch?v=_P76rGr5vjE" target="_blank" rel="noopener noreferrer" aria-label="Watch The Wedding Complete Film on YouTube">
+          <img src="https://i.ytimg.com/vi/_P76rGr5vjE/hqdefault.jpg" alt="The Wedding complete film poster" loading="lazy">
+          <span class="video-poster-overlay"></span>
+          <span class="video-play-badge">Watch on YouTube</span>
+        </a>
       </div>
-
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-ornament">
-      <span class="od-line"></span>
-      <span class="od-motif">◆</span>
-      <span class="od-line"></span>
-    </div>
-    <p class="footer-names">Yash &amp; Shweta</p>
-    <p class="footer-venue">Chokhi Dhani, Jaipur &middot; February 2026</p>
+    <p class="footer-kicker">Yash &amp; Shweta</p>
+    <p class="footer-title">Thank you for reliving the celebrations with us.</p>
+    <p class="footer-venue">Chokhi Dhani, Jaipur · February 2026</p>
     <a href="https://drive.google.com/drive/u/0/folders/14LOV0zsLmYr8rPiG0ejq_0-RF6wycTV3" class="footer-drive-link" target="_blank" rel="noopener noreferrer">
-      &#128229; View Full Album on Google Drive
+      View the full Google Drive album
     </a>
-    <p class="footer-note">Made with love</p>
   </footer>
 
-  <script src="js/gallery.js"></script>
+  <script src="js/gallery.js?v=20260426p"></script>
 </body>
 </html>
